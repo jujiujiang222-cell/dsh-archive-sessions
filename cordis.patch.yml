@@ -1,0 +1,6 @@
+# dsh bundle patch: inserts this plugin's row into the active profile's
+# layer stack. `id` is the row identity used by the composition loader;
+# `name` must equal the installed package name.
+- insert:
+    - id: dsh-archive-sessions
+      name: dsh-archive-sessions

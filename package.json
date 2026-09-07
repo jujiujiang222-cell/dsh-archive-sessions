@@ -1,0 +1,49 @@
+{
+  "name": "dsh-archive-sessions",
+  "version": "1.0.0",
+  "description": "Archived-session manager for DeepSeek Harness: list archived sessions, restore or permanently delete them. · DeepSeek Harness 归档会话管理：在设置中列出已归档会话，支持恢复与永久删除。",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "archive",
+    "session",
+    "settings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jujiujiang222-cell/dsh-archive-sessions.git"
+  },
+  "homepage": "https://github.com/jujiujiang222-cell/dsh-archive-sessions#readme",
+  "license": "MIT"
+}
